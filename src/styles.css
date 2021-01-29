@@ -1,1 +1,113 @@
-/* You can add global styles to this file, and also import other style files */
+/* Ustalenie właściwości "box-sizing" dla wszystkich elementów */
+* {
+    box-sizing: border-box;
+  }
+  header {
+    text-align: center;
+  }
+  /* Właściwości dla body */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .emailclas:link{
+    color: yellow;
+  }
+  .emailclas:hover {
+    color: hotpink;
+  }
+  /* Klasa kontenera, która ma ograniczoną szerokość i wyśrodkowuje content */
+  /* Ustawienie lewego i prawego marginesu na "auto" wyśrodkowuje kontener */
+  /* .container {
+    margin: auto 20px;
+    width: 100%;
+  } */
+  
+  /* Tabele */
+  table {
+    width: 100%;
+  }
+  table th,
+  table td {
+    padding: 8px;
+    text-align: left;
+  }
+  /* Cieniujemy co drugi (parzysty) wiersz tabeli */
+  /* Używamy tbody, aby upewnić się, że nie cieniujemy nagłówka - to zachowuje kolejność cieniowania */
+  table tbody > tr:nth-child(odd) {
+    background: #00000086;
+  }
+
+  table tbody > tr:nth-child(even) {
+    background: #000000c4;
+  }
+  
+  /* Przyciski */
+  .button {
+    display: inline-block;
+    margin: 2px 0;
+    padding: 12px 30px 14px;
+    border: 0;
+    background: #999999;
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  /* Przycisk po najechaniu kursorem */
+  .button:hover {
+    background: #888888;
+  }
+  /* Przycisk w stanie aktywnym */
+  .button:active,
+  .button:focus {
+    background: #777777;
+  }
+  
+  /* Przycisk w kolorze zielonym */
+  .button-green {
+    background: #33cc54b2;
+    text-align: center;
+  }
+  .button-green:hover {
+    background: #22cc54b2;
+  }
+  .button-green:active,
+  .button-green:focus {
+    background: #22cc54b2;
+  }
+  
+  /* Przycisk w kolorze czerwonym */
+  .button-red {
+    background: #dd333396;
+  }
+  .button-red:hover {
+    background: #cc333396;
+  }
+  .button-red:active,
+  .button-red:focus {
+    background: #bb333396;
+  }
+  
+  #actions-container{
+      display: flex;
+      flex-direction: column;
+  }
+
+  /* Media Query dla urządzeń o minimalnej szerokości 992px */
+  /* czyli dla komputerów stacjonarnych */
+  @media (min-width: 1500px) {
+    .container {
+      max-width: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

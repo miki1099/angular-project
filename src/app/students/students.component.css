@@ -1,0 +1,26 @@
+th{
+    background-color: rgba(28, 2, 71, 0.781);
+}
+
+#full-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start
+}
+
+.new-student{
+    text-align: center;
+    justify-content: right;
+    max-height: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 5%;
+    top: 10%;
+    border: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+table{
+    max-width: 60%;
+}

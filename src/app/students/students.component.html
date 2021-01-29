@@ -1,0 +1,48 @@
+<section id="full-section">
+  <div class="new-student">
+    <h3>Dodaj nowego studenta</h3>
+
+    <label for="username">Nazwa użytkownika</label>
+    <br>
+    <input type="text" id="username" #username>
+    <br>
+    <label for="name">Imię i nazwisko:</label>
+    <br>
+    <input type="text" id="name" #name>
+    <br>
+    <label for="email">Adres e-mail:</label>
+    <br>
+    <input type="email" id="email" #email>
+    <br>
+    <button (click)="add(name.value, email.value, username.value); name.value='' ; email.value=''; username.value=''">Dodaj</button>
+    <br>
+    <app-student-search id="student-search"></app-student-search>
+  </div>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nazwa użytkownika</th>
+        <th>Imię i nazwisko</th>
+        <th>Adres e-mail</th>
+        <th>Akcje</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{student.id}}</td>
+        <td>{{student.username}}</td>
+        <td>{{student.name}}</td>
+        <td>
+          <a href="mailto:{{student.email}}" class="emailclas">{{student.email}}</a>
+        </td>
+        <td id="actions-container">
+          <a routerLink="/edit/{{student.id}}" class="button button-green">Edytuj</a>
+          <button class="button button-red" (click)="delete(student)">Usuń</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+  
